@@ -13,11 +13,11 @@
 // console.log(document.forms);
 // console.log(document.links);
 
-// GET ELEMENT BY ID//
+//GET ELEMENT BY ID//
 // console.log(document.getElementById("header-title"));
 // var headerTitle = document.getElementById("header-title");
 // console.log(headerTitle);
-// headerTitle.textContent = "Hello";
+// headerTitle.textContent = "Add Items";
 // headerTitle.innerText = "Goodbye";
 // console.log(headerTitle.innerText);
 // headerTitle.style.border - bottom;
