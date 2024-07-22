@@ -52,8 +52,6 @@ newDiv.id = "hello1";
 //Add Attr
 newDiv.setAttribute("title", "Hello Div");
 
-console.log(newDiv);
-
 //Create text mode
 var newDivText = document.createTextNode("Hello World");
 
@@ -64,7 +62,5 @@ var container = document.querySelector("header .container");
 var h1 = document.querySelector("header h1");
 
 console.log(newDiv);
-
-newDiv.style.fontSize = "30px";
 
 container.insertBefore(newDiv, h1);

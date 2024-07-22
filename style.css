@@ -66,3 +66,16 @@ input {
 .list-group-item:last-child {
   margin-bottom: 10px;
 }
+
+#button {
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 5vh;
+  margin: 0; /* Ensure no margin around the button */
+  padding: 2px; /* Remove any padding */
+  box-sizing: padding-box; /* Include padding and border in the element's total width and height */
+}
