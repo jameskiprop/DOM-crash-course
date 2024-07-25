@@ -29,12 +29,47 @@
 //   }
 // }
 
-var button = document.getElementById("button");
-button.addEventListener("click", runEvent);
+// var button = document.getElementById("button");
+// var box = document.getElementById("box");
+
+// button.addEventListener("click", runEvent);
 // button.addEventListener("dblclick", runEvent);
 // button.addEventListener("mousedown", runEvent);
 // button.addEventListener("mouseup", runEvent);
 
+// box.addEventListener("mouseenter", runEvent);
+// box.addEventListener("mouseleave", runEvent);
+
+// box.addEventListener("mouseover", runEvent);
+// box.addEventListener("mouseout", runEvent);
+
+// box.addEventListener("mousemove", runEvent);
+
+// function runEvent(e) {
+//   console.log("EVENT TYPE: ", e.type);
+
+//   output.innerHTML =
+//     "<h3>MouseX: " + e.offsetX + " </h3><h3>MouseY: " + e.offsetY + " </h3>";
+
+//   document.body.style.backgroundColor =
+//     "rgb(" + e.offsetX + ", " + e.offsetY + "40)";
+// }
+
+// Selecting the input element of type "text"
+var itemInput = document.querySelector('input[type="text"]');
+
+// Selecting the form element
+var form = document.querySelector("form");
+itemInput.addEventListener("keydown", runEvent); // Adding an event listener to the input element that listens for the "keydown" event
+itemInput.addEventListener("keyup", runEvent);
+
+// Defining a function which will run when the "keydown" event is triggered
 function runEvent(e) {
-  console.log("EVENT TYPE:", " " + e.type);
+  // Logging the event type to the console
+  console.log("EVENT TYPE: " + e.type);
+
+  // Logging the current value of the input element to the console
+  console.log(e.target.value);
+  document.getElementById("output").innerHTML = // Displaying the current value of the input element in an element with the ID "output"
+    "<h3>" + e.target.value + "</h3>";
 }
