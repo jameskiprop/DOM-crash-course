@@ -57,14 +57,24 @@
 
 // Selecting the input element of type "text"
 var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector("form"); // Selecting the form element
+var select = document.querySelector("select");
 
-// Selecting the form element
-var form = document.querySelector("form");
-itemInput.addEventListener("keydown", runEvent); // Adding an event listener to the input element that listens for the "keydown" event
-itemInput.addEventListener("keyup", runEvent);
+// itemInput.addEventListener("keydown", runEvent); // Adding an event listener to the input element that listens for the "keydown" event
+// itemInput.addEventListener("keyup", runEvent);
+// itemInput.addEventListener("keypress", runEvent);
+// itemInput.addEventListener("focus", runEvent);
+// itemInput.addEventListener("blur", runEvent);
+
+// itemInput.addEventListener("cut", runEvent);
+// itemInput.addEventListener("paste", runEvent);
+
+select.addEventListener("change", runEvent);
+form.addEventListener("submit", runEvent);
 
 // Defining a function which will run when the "keydown" event is triggered
 function runEvent(e) {
+  e.preventDefault();
   // Logging the event type to the console
   console.log("EVENT TYPE: " + e.type);
 
